@@ -112,10 +112,43 @@ margin-left: 93px;
 .header-accent {
   color: var(--subtitle-text-color);
 }
+/*icon*/
+.header-contact.mail::before{
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url(../img/image/envelope\ \(hover\).svg);
+  background-size: contain;
+}
+.header-contact.mail::before:hover,
+.header-contact.mail::after:focus{
+  background-color: #2196F3;
+}
+.header-contact.tel::before{
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url(../img/image/tel.svg);
+  background-size: contain; 
+  background-repeat: no-repeat;
+}
 /* герой*/
 .hero {
-background-color: var(--page-color);
 padding: 200px 0;
+max-width: 1600px;
+height: 600px;
+margin-left: auto;
+margin-right: auto;
+background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+ url(../img/image/Img.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: auto auto;
+background-color: var(--page-color);
 }
 .container-hero{
   margin-left: auto;
@@ -182,6 +215,30 @@ padding-top: 0;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-text-color);
+}
+/*icon*/
+.content-item::before{
+  display: block;
+  content: "";
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--box-color);
+}
+.content-item.icon-antenna::before{
+  background-image: url(..//img/image/Vector.svg);
+}
+.content-item.icon-clock::before{
+background-image: url(../img/image/time.svg);
+}
+.content-item.icon-diagram::before{
+  background-image: url(../img/image/comp.svg);
+}
+.content-item.icon-astronaut::before{
+  background-image: url(../img/image/astronavt.svg);
 }
  /*Чем мы занимаемся*/
 .main-title {
@@ -299,7 +356,17 @@ padding-top: 0;
 .footer-accen {
   color: var(--slogan-text-color);
 }
-
+.footer-icon{
+  display: flex;
+  text-align: center;
+  margin-left: 70px;
+}
+/* .site-nav{
+  display: flex;
+  margin-left: 93px;
+  }
+  .site-nav .item + .item{
+    margin-left: 50px; */
 /* Rectangle*/
 .button {
   padding: 6px 22px;

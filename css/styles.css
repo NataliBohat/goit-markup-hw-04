@@ -119,7 +119,7 @@ margin-left: 93px;
   width: 16px;
   height: 12px;
   margin-right: 10px;
-  background-image: url(../img/image/envelope\ \(hover\).svg);
+  background-image: url(../img/icon/envelope\ \(hover\).svg);
   background-size: contain;
 }
 .header-contact.mail::before:hover,
@@ -132,7 +132,7 @@ margin-left: 93px;
   width: 10px;
   height: 12px;
   margin-right: 10px;
-  background-image: url(../img/image/tel.svg);
+  background-image: url(../img/icon/tel.svg);
   background-size: contain; 
   background-repeat: no-repeat;
 }
@@ -144,7 +144,7 @@ height: 600px;
 margin-left: auto;
 margin-right: auto;
 background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
- url(../img/image/Img.jpg);
+ url(../img/icon/Img.jpg);
 background-repeat: no-repeat;
 background-position: center;
 background-size: auto auto;
@@ -229,16 +229,16 @@ padding-top: 0;
   background-color: var(--box-color);
 }
 .content-item.icon-antenna::before{
-  background-image: url(..//img/image/Vector.svg);
+  background-image: url(../img/icon/Vector.svg);
 }
 .content-item.icon-clock::before{
-background-image: url(../img/image/time.svg);
+background-image: url(../img/icon/time.svg);
 }
 .content-item.icon-diagram::before{
-  background-image: url(../img/image/comp.svg);
+  background-image: url(../img/icon/comp.svg);
 }
 .content-item.icon-astronaut::before{
-  background-image: url(../img/image/astronavt.svg);
+  background-image: url(../img/icon/astronavt.svg);
 }
  /*Чем мы занимаемся*/
 .main-title {
@@ -289,6 +289,7 @@ background-image: url(../img/image/time.svg);
 }
 .uppertitle {
   margin-top: 10px;
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.2;
   color: var(--secondary-text-color);
@@ -297,7 +298,33 @@ background-image: url(../img/image/time.svg);
   padding-top: 30px;
   padding-bottom: 30px;
 }
-/*feature*/
+/* оформлення іконок */
+.social-media{
+  display: flex;
+  justify-content: center;
+}
+.social-media-item:not(:last-child){
+  margin-right: 10px;
+}
+.social-media-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: #AFB1B8;
+  background-color: var(--slogan-text-color);
+  border-radius: 50%;
+}
+.social-media-link:hover,
+.social-media-link:focus{
+  color: var(--slogan-text-color);
+  background-color:  #2196F3;;
+}
+.social-media-icon{
+  fill: currentColor;
+}
+  /*feature*/
 .feature-list{
   display: flex;
   flex-wrap: wrap;

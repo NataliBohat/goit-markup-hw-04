@@ -105,8 +105,9 @@ margin-left: 93px;
 }
 .item:hover,
 .item:focus{
-  color: #2196f3;
+color: var(--acsent-text-color);
 }
+
 .header-contact {
   color: var(--secondary-text-color);
 }
@@ -125,12 +126,12 @@ margin-left: 93px;
   height: 12px;
   margin-right: 10px;
   background-size: contain;
-  fill: var(--secondary-text-color);
+  fill: currentColor; 
 }
 .header-contact-icon:hover,
 .header-contact-icon:focus{
   fill: currentColor;
-}
+} 
 /* герой*/
 .hero {
 padding: 200px 0;
@@ -321,11 +322,18 @@ padding-top: 0;
   
   margin-bottom: 30px;
 }
+.feature-list{
+  border: 1px solid var(--fetcher-title-color);
+}
 .flex-element:nth-child(3n + 3){
   margin-right: 0;
 }
 .flex-element:nth-last-child(-n + 3){
   margin-bottom: 0;
+} 
+.flex-element:hover,
+.flex-element:focus{
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);;
 } 
 .feature-title{
   padding: 20px 24px;
@@ -374,13 +382,7 @@ color: var(--primary-text-color);
   padding-bottom: 60px;
   background: var(--page-color);
 }
-.footer .container{
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 .footer-nav {
   font-style: normal;
   line-height: 1.7;
@@ -406,16 +408,20 @@ color: var(--primary-text-color);
 /*присоединяйтесь*/
 .footer-container{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: baseline;
 }
 .footer-title{
-font-weight: 700;
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.03em;
-color:var(--slogan-text-color);
-padding-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--slogan-text-color) ;
+}
+.footer-main{
+  display: flex;
+  margin-top: 20px;
 }
 .footer-main-item:not(:last-child){
   margin-right: 10px;
@@ -434,6 +440,11 @@ padding-bottom: 20px;
 .footer-media:focus{
   background-color: var(--acsent-text-color);
 }
+
+.footer-container-logo {
+  width: 270px;
+}
+
 .button {
   padding: 6px 22px;
   border: none;

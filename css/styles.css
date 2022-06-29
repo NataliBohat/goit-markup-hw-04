@@ -103,12 +103,17 @@ margin-left: 93px;
 .auth-nav .item + .item{
   margin-left: 50px;
 }
+.item:hover,
+.item:focus{
+  color: #2196f3;
+}
 .header-contact {
   color: var(--secondary-text-color);
 }
 .header-contact:hover,
 .header-contact:focus {
-  color: var(--acsent-text-color);
+  /* color: var(--acsent-text-color); */
+  color: currentColor;
 }
 .header-accent {
   color: var(--subtitle-text-color);
@@ -364,6 +369,7 @@ color: var(--primary-text-color);
 
 /*Footer*/
 .footer {
+  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
   background: var(--page-color);
@@ -398,8 +404,10 @@ color: var(--primary-text-color);
   color: var(--slogan-text-color);
 }
 /*присоединяйтесь*/
-.footer-main{
+.footer-container{
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footer-title{
 font-weight: 700;

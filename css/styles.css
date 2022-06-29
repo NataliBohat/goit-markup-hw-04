@@ -9,8 +9,9 @@
   --subtitle-text-color: #000000;
   --contact-text-color: rgba(255, 255, 255, 0.6);
   --title-hover-color: #188CE8;
-  --fetcher-title-color:  #EEEEEE;
+  --fetcher-title-color: #EEEEEE;
   --header-border-colors: #ECECEC;
+  --client-title-colors: #AFB1B8;
 }
 body {
   margin: 0;
@@ -113,28 +114,17 @@ margin-left: 93px;
   color: var(--subtitle-text-color);
 }
 /*icon*/
-.header-contact.mail::before{
+.header-contact-icon{
   display: inline-block;
-  content: "";
   width: 16px;
   height: 12px;
   margin-right: 10px;
-  background-image: url(../img/icon/envelope\ \(hover\).svg);
   background-size: contain;
+  fill: var(--secondary-text-color);
 }
-.header-contact.mail::before:hover,
-.header-contact.mail::after:focus{
-  background-color: #2196F3;
-}
-.header-contact.tel::before{
-  display: inline-block;
-  content: "";
-  width: 10px;
-  height: 12px;
-  margin-right: 10px;
-  background-image: url(../img/icon/tel.svg);
-  background-size: contain; 
-  background-repeat: no-repeat;
+.header-contact-icon:hover,
+.header-contact-icon:focus{
+  fill: currentColor;
 }
 /* герой*/
 .hero {
@@ -217,28 +207,19 @@ padding-top: 0;
   color: var(--primary-text-color);
 }
 /*icon*/
-.content-item::before{
-  display: block;
-  content: "";
+.content-media{
+  display: flex;
   width: 270px;
   height: 120px;
   margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
   background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  color: var(--primary-text-color);
   background-color: var(--box-color);
 }
-.content-item.icon-antenna::before{
-  background-image: url(../img/icon/Vector.svg);
-}
-.content-item.icon-clock::before{
-background-image: url(../img/icon/time.svg);
-}
-.content-item.icon-diagram::before{
-  background-image: url(../img/icon/comp.svg);
-}
-.content-item.icon-astronaut::before{
-  background-image: url(../img/icon/astronavt.svg);
+.content-item:not(:last-child){
+  margin-right: 30px;
 }
  /*Чем мы занимаемся*/
 .main-title {
@@ -312,14 +293,14 @@ background-image: url(../img/icon/time.svg);
   justify-content: center;
   width: 44px;
   height: 44px;
-  color: #AFB1B8;
+  color: var(--client-title-colors);
   background-color: var(--slogan-text-color);
   border-radius: 50%;
 }
 .social-media-link:hover,
 .social-media-link:focus{
   color: var(--slogan-text-color);
-  background-color:  #2196F3;;
+  background-color: var(--acsent-text-color);
 }
 .social-media-icon{
   fill: currentColor;
@@ -348,6 +329,39 @@ background-image: url(../img/icon/time.svg);
   border-bottom: 370px;
   border: 1px solid var(--fetcher-title-color);
 }
+/*клиенты*/
+.client-main{
+  display: flex;
+  justify-content: center;
+}
+.client-title{
+font-weight: 700;
+font-size: 36px;
+line-height: 1.16;
+text-align: center;
+letter-spacing: 0.03em;
+padding-bottom: 50px;
+color: var(--primary-text-color);
+}
+.client-item:not(:last-child){
+  margin-right: 30px;
+}
+.client-media{
+  display: flex;
+  width: 170px;
+  height: 92px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  fill: var(--client-title-colors);
+  outline: 1px solid var(--client-title-colors);
+}
+.client-media:hover,
+.client-media:focus{
+  fill: var(--acsent-text-color);
+  outline: 1px solid var(--acsent-text-color) ;
+}
+
 /*Footer*/
 .footer {
   padding-top: 60px;
@@ -383,23 +397,39 @@ background-image: url(../img/icon/time.svg);
 .footer-accen {
   color: var(--slogan-text-color);
 }
-.footer-icon{
+/*присоединяйтесь*/
+.footer-main{
   display: flex;
-  text-align: center;
-  margin-left: 70px;
 }
-/* .site-nav{
+.footer-title{
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.03em;
+color:var(--slogan-text-color);
+padding-bottom: 20px;
+}
+.footer-main-item:not(:last-child){
+  margin-right: 10px;
+}
+.footer-media{
   display: flex;
-  margin-left: 93px;
-  }
-  .site-nav .item + .item{
-    margin-left: 50px; */
-/* Rectangle*/
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  fill:var(--slogan-text-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.footer-media:hover,
+.footer-media:focus{
+  background-color: var(--acsent-text-color);
+}
 .button {
   padding: 6px 22px;
   border: none;
   border-radius: 4px;
-
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -440,7 +470,3 @@ background-image: url(../img/icon/time.svg);
   letter-spacing: 0.06em;
   color: var(--primary-text-color);
 }
-
-/** {
-  outline: 2px solid tomato;
-}*/

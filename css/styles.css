@@ -110,10 +110,11 @@ color: var(--acsent-text-color);
 
 .header-contact {
   color: var(--secondary-text-color);
+  display: flex;
+  align-items: center;
 }
 .header-contact:hover,
 .header-contact:focus {
-  /* color: var(--acsent-text-color); */
   color: currentColor;
 }
 .header-accent {
@@ -122,8 +123,6 @@ color: var(--acsent-text-color);
 /*icon*/
 .header-contact-icon{
   display: inline-block;
-  width: 16px;
-  height: 12px;
   margin-right: 10px;
   background-size: contain;
   fill: currentColor; 
@@ -319,11 +318,7 @@ padding-top: 0;
 .feature-list > .flex-element {
   margin-right: 30px;
   flex-basis: calc((100% - 60px) /3);
-  
   margin-bottom: 30px;
-}
-.feature-list{
-  border: 1px solid var(--fetcher-title-color);
 }
 .flex-element:nth-child(3n + 3){
   margin-right: 0;
@@ -331,15 +326,16 @@ padding-top: 0;
 .flex-element:nth-last-child(-n + 3){
   margin-bottom: 0;
 } 
-.flex-element:hover,
-.flex-element:focus{
+.feature-img{
+  display: block;
+}
+.feature-img:hover,
+.feature-img:focus{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);;
 } 
 .feature-title{
   padding: 20px 24px;
-  border-left: 110px;
-  border-right: 110px;
-  border-bottom: 370px;
+  border-width: 0 110px 370px;
   border: 1px solid var(--fetcher-title-color);
 }
 /*клиенты*/
@@ -353,7 +349,7 @@ font-size: 36px;
 line-height: 1.16;
 text-align: center;
 letter-spacing: 0.03em;
-padding-bottom: 50px;
+margin-bottom: 50px;
 color: var(--primary-text-color);
 }
 .client-item:not(:last-child){
@@ -365,6 +361,7 @@ color: var(--primary-text-color);
   height: 92px;
   align-items: center;
   justify-content: center;
+  border-radius: 4px;
   box-sizing: border-box;
   fill: var(--client-title-colors);
   outline: 1px solid var(--client-title-colors);
@@ -477,6 +474,7 @@ color: var(--primary-text-color);
 .button:focus {
   background-color: var(--acsent-text-color);
   color: var(--slogan-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* img */
